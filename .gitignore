@@ -1,0 +1,12 @@
+# Exclude modules brought in by npm install
+/node_modules/
+
+# Exclude temporary storage used at runtime (when used as server instead of module)
+/tmp/
+/data/
+
+# Exclude debug log recorded by service
+/npm-debug.log
+
+# TODO: Remove once ACD module in progress
+/mnt/

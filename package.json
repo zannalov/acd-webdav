@@ -1,0 +1,21 @@
+{
+  "name": "acd-webdav",
+  "version": "0.0.0",
+  "description": "Amazon Cloud Drive via WebDAV",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo TODO"
+  },
+  "keywords": [
+    "Amazon",
+    "Cloud",
+    "Drive",
+    "WebDAV"
+  ],
+  "author": "Jason Schmidt",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "jsDAV": "^0.3.2"
+  }
+}
