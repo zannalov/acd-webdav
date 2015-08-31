@@ -16,7 +16,6 @@
   "author": "Jason Schmidt",
   "license": "GPL-3.0",
   "dependencies": {
-    "aws-sdk": "^2.1.48",
     "jsDAV": "^0.3.2"
   }
 }
