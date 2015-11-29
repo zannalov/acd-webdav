@@ -17,8 +17,8 @@ var http = require( 'http' );
 // Configuration
 var port = process.env.PORT || config.port || 8080;
 var lockDir = process.env.LOCK_DIR || config.lockDir || ( __dirname + '/data' );
-var tmpDir = process.env.TMP_DIR || config.tmpDir || ( __dirname + './tmp' );
-var mount = process.env.MOUNT || config.mount || '/';
+var tmpDir = process.env.TMP_DIR || config.tmpDir || ( __dirname + '/tmp' );
+var httpBasePath = process.env.MOUNT || config.httpBasePath || '/';
 var debugMode = Boolean(process.env.DEBUG) || config.debug || false;
 
 // Set up the HTTPS listening server
@@ -33,7 +33,7 @@ var jsdav = JSDAV.mount( {
     node: __dirname + '/mnt' , // TODO: Instead of "node" use "tree" and create a jsDAV_Tree_ACD class. See ~line 102 in node_modules/jsDAV/lib/DAV/server.js: this.tree = jsDAV_Tree_Filesystem.new(options.node, options);
     locksBackend: locksBackend ,
     server: server ,
-    mount: mount ,
+    mount: httpBasePath ,
     tmpDir: tmpDir ,
 } );
 
