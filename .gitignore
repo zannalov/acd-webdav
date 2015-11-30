@@ -8,5 +8,8 @@
 # Exclude debug log recorded by service
 /npm-debug.log
 
+# Exclude cached credentials
+/.amazon-credentials.json
+
 # TODO: Remove once ACD module in progress
 /mnt/

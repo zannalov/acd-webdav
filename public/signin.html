@@ -1,2 +1,21 @@
-<!-- TODO -->
-Hello World
+<!DOCTYPE html>
+<script type="text/javascript">
+    var url = (
+        document.location.protocol + '//'
+        + document.location.host
+        + '/signin'
+    );
+
+    if( document.location.hash ) {
+        url += document.location.hash.replace( /^#/ , '?' );
+    } else {
+        url += document.location.search;
+    }
+
+    if( window.console && window.console.log ) {
+        window.console.log( 'Redirecting to: ' + url );
+    }
+
+    document.write( 'Please wait...' );
+    document.location.href = url;
+</script>
