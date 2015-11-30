@@ -4,6 +4,7 @@ This package provides a WebDAV interface for Amazon Cloud Drive.
 
 # Usage #
 
+TODO - run as app
 TODO - jsDAV style interface
 
 # Why #
@@ -12,6 +13,8 @@ TODO - jsDAV style interface
 
 [WebDAV](http://www.webdav.org/) is natively supported on most operating systems. [FUSE](http://fuse.sourceforge.net/) is only natively supported in Linux. This should be mountable as a local file-path **without requiring file synchronization**.
 
+With only slight modification (allowing access to non-localhost interface), this can also be run on a home network to share a cloud drive.
+
 # References #
 
 * [Amazon Web Service SDK NPM Module](https://www.npmjs.com/package/aws-sdk)
@@ -19,3 +22,4 @@ TODO - jsDAV style interface
 * [Amazon Cloud Drive Developer Documentation](https://developer.amazon.com/public/apis/experience/cloud-drive/)
 * [jsDAV](https://github.com/mikedeboer/jsDAV)
 * [NodeJS API](https://nodejs.org/api/)
+* [Why not use aws-sdk-js?](https://github.com/aws/aws-sdk-net/issues/188)

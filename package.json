@@ -16,6 +16,8 @@
   "author": "Jason Schmidt",
   "license": "GPL-3.0",
   "dependencies": {
-    "jsDAV": "^0.3.2"
+    "express": "^4.13.3",
+    "jsDAV": "^0.3.2",
+    "open": "0.0.5"
   }
 }
