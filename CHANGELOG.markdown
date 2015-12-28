@@ -4,6 +4,7 @@ Version 0.0.2
 * Always use ``callback( err , args )`` format
 * Move config beneath library load
 * Preparing to share auth with jsDAV backend
+* Implemented read functionality for folders and metadata
 
 Version 0.0.1
 * Example config file (if you ``npm install config``)

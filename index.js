@@ -48,6 +48,7 @@ var amazonAuthConfig = config.amazonAuthConfig || {
     scope: 'clouddrive:read_all clouddrive:write',
     redirect_uri: 'http://localhost:8080/signin.html',
 };
+var amazonCloudDriveBasePath = process.env.ACD_BASE_PATH || config.amazonCloudDriveBasePath || '/';
 
 // Load Amazon credentials (if stored)
 var amazonCredentials = null;
@@ -113,12 +114,16 @@ app.get( '/signin' , function( req , res ) {
 // Set up jsDAV/WebDAV on the root path so that WinXP will play nicely
 JSDAV.debugMode = false; // TODO: Get debug messages into logger
 var locksBackend = JSDAV_Locks_Backend_FS.new( lockDir );
-var jsdav = JSDAV.mount( {
-    node: __dirname + '/mnt' , // TODO: Instead of "node" use "tree" and create a jsDAV_Tree_ACD class. See ~line 102 in node_modules/jsDAV/lib/DAV/server.js: this.tree = jsDAV_Tree_Filesystem.new(options.node, options);
+var jsdavOptions = {
     locksBackend: locksBackend,
     server: server,
     mount: httpBasePath,
     standalone: false,
     tmpDir: tmpDir,
-} );
+    amazonAuth: amazonAuth,
+    path: amazonCloudDriveBasePath,
+    sandboxed: true,
+};
+jsdavOptions.tree = jsDAV_ACD_Tree.new( jsdavOptions );
+var jsdav = JSDAV.mount( jsdavOptions );
 app.use( jsdav.exec.bind( jsdav ) ); // Use the exec method as the callback for anything express didn't understand
