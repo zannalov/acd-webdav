@@ -3,6 +3,7 @@ Version 0.0.2
 * Support loading as library
 * Always use ``callback( err , args )`` format
 * Move config beneath library load
+* Preparing to share auth with jsDAV backend
 
 Version 0.0.1
 * Example config file (if you ``npm install config``)

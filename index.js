@@ -1,17 +1,19 @@
 #!/usr/bin/env node
 'use strict';
 
-var DAV_backends_amazonCloudDrive_directory = require( './lib/DAV/backends/amazon-cloud-drive/directory.js' );
-var DAV_backends_amazonCloudDrive_file = require( './lib/DAV/backends/amazon-cloud-drive/file.js' );
-var DAV_backends_amazonCloudDrive_node = require( './lib/DAV/backends/amazon-cloud-drive/node.js' );
-var DAV_backends_amazonCloudDrive_tree = require( './lib/DAV/backends/amazon-cloud-drive/tree.js' );
+var jsDAV_ACD_Auth = require( './lib/DAV/backends/amazon-cloud-drive/auth.js' ).AmazonAuth;
+var jsDAV_ACD_Directory = require( './lib/DAV/backends/amazon-cloud-drive/directory.js' );
+var jsDAV_ACD_File = require( './lib/DAV/backends/amazon-cloud-drive/file.js' );
+var jsDAV_ACD_Node = require( './lib/DAV/backends/amazon-cloud-drive/node.js' );
+var jsDAV_ACD_Tree = require( './lib/DAV/backends/amazon-cloud-drive/tree.js' );
 
 if( require.main !== module ) {
     module.exports = {
-        directory: DAV_backends_amazonCloudDrive_directory,
-        file: DAV_backends_amazonCloudDrive_file,
-        node: DAV_backends_amazonCloudDrive_node,
-        tree: DAV_backends_amazonCloudDrive_tree,
+        Auth: jsDAV_ACD_Auth,
+        Directory: jsDAV_ACD_Directory,
+        File: jsDAV_ACD_File,
+        Node: jsDAV_ACD_Node,
+        Tree: jsDAV_ACD_Tree,
     };
 
     return;
@@ -22,7 +24,6 @@ var fs = require( 'fs' );
 var http = require( 'http' );
 var open = require( 'open' );
 var express = require( 'express' );
-var AmazonAuth = require( './lib/DAV/backends/amazon-cloud-drive/auth.js' ).AmazonAuth;
 var JSDAV = require( 'jsDAV/lib/jsdav' );
 var JSDAV_Locks_Backend_FS = require( 'jsDAV/lib/DAV/plugins/locks/fs' );
 
@@ -64,7 +65,7 @@ try {
 }
 
 // Set up the Amazon auth
-var amazonAuth = new AmazonAuth( amazonCredentials || amazonAuthConfig );
+var amazonAuth = new jsDAV_ACD_Auth( amazonCredentials || amazonAuthConfig );
 function saveAmazonCredentials() {
     fs.writeFile( amazonCredentialsJsonFile , JSON.stringify( amazonAuth ) , function( err ) {
         console.log( 'Saved ' + amazonCredentialsJsonFile );
