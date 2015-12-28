@@ -80,12 +80,13 @@ var mountUrl = 'http://' + hostname + ':' + port;
 server.on( 'listening' , function() {
     console.log( 'Listening on ' + mountUrl );
 
-    amazonAuth.getToken( function( token ) {
-        if( !token ) {
+    amazonAuth.getToken( function( error , token ) {
+        if( error || !token ) {
             open( amazonAuth.generateAuthUrl() );
-        } else {
-            console.log( 'Ready!' );
+            return;
         }
+
+        console.log( 'Ready!' );
     } );
 } );
 server.listen( port , hostname );
@@ -95,15 +96,16 @@ var app = express();
 server.on( 'request' , app );
 app.use( express.static( __dirname + '/public' ) ); // Handle static pages provided by the app
 app.get( '/signin' , function( req , res ) {
-    amazonAuth.processTokenResponse( req.query , function( token ) {
-        if( token ) {
-            res.writeHead( 200 );
-            res.end( '<!DOCTYPE html>Thanks! You may now mount <a href="' + mountUrl + '">' + mountUrl + '</a>' );
-            console.log( 'Ready!' );
-        } else {
+    amazonAuth.processTokenResponse( req.query , function( error , token ) {
+        if( error || !token ) {
             res.writeHead( 400 );
             res.end( 'There was an error processing the token. Please try again.' );
+            return;
         }
+
+        res.writeHead( 200 );
+        res.end( '<!DOCTYPE html>Thanks! You may now mount <a href="' + mountUrl + '">' + mountUrl + '</a>' );
+        console.log( 'Ready!' );
     } );
 } );
 
