@@ -1,6 +1,22 @@
 #!/usr/bin/env node
 'use strict';
 
+var DAV_backends_amazonCloudDrive_directory = require( './lib/DAV/backends/amazon-cloud-drive/directory.js' );
+var DAV_backends_amazonCloudDrive_file = require( './lib/DAV/backends/amazon-cloud-drive/file.js' );
+var DAV_backends_amazonCloudDrive_node = require( './lib/DAV/backends/amazon-cloud-drive/node.js' );
+var DAV_backends_amazonCloudDrive_tree = require( './lib/DAV/backends/amazon-cloud-drive/tree.js' );
+
+if( require.main !== module ) {
+    module.exports = {
+        directory: DAV_backends_amazonCloudDrive_directory,
+        file: DAV_backends_amazonCloudDrive_file,
+        node: DAV_backends_amazonCloudDrive_node,
+        tree: DAV_backends_amazonCloudDrive_tree,
+    };
+
+    return;
+}
+
 // Support the popular "config" npm module, but don't require it
 var config;
 try {
