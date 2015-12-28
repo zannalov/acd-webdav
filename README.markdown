@@ -44,8 +44,6 @@ Additionally, the config module supports several other interfaces, including usi
 
 # References #
 
-* [Amazon Web Service SDK NPM Module](https://www.npmjs.com/package/aws-sdk)
-* [Amazon Web Service JavaScript SDK Documentation](https://docs.aws.amazon.com/AWSJavaScriptSDK/guide/)
 * [Amazon Cloud Drive Developer Documentation](https://developer.amazon.com/public/apis/experience/cloud-drive/)
 * [jsDAV](https://github.com/mikedeboer/jsDAV)
 * [jsDAV Google Group](https://groups.google.com/forum/#!forum/jsdav)

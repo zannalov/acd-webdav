@@ -1,3 +1,6 @@
+Version 0.0.2
+* Removed incorrect reference links
+
 Version 0.0.1
 * Example config file (if you ``npm install config``)
 * Investigated using aws-sdk-js, will not work for this project
