@@ -2,6 +2,7 @@ Version 0.0.2
 * Removed incorrect reference links
 * Support loading as library
 * Always use ``callback( err , args )`` format
+* Move config beneath library load
 
 Version 0.0.1
 * Example config file (if you ``npm install config``)

@@ -17,14 +17,6 @@ if( require.main !== module ) {
     return;
 }
 
-// Support the popular "config" npm module, but don't require it
-var config;
-try {
-    config = require('config');
-} catch (e) {
-    config = {};
-}
-
 // Modules
 var fs = require( 'fs' );
 var http = require( 'http' );
@@ -33,6 +25,14 @@ var express = require( 'express' );
 var AmazonAuth = require( './lib/DAV/backends/amazon-cloud-drive/auth.js' ).AmazonAuth;
 var JSDAV = require( 'jsDAV/lib/jsdav' );
 var JSDAV_Locks_Backend_FS = require( 'jsDAV/lib/DAV/plugins/locks/fs' );
+
+// Support the popular "config" npm module, but don't require it
+var config;
+try {
+    config = require('config');
+} catch (e) {
+    config = {};
+}
 
 // Configuration
 var port = process.env.PORT || config.port || 8080;
