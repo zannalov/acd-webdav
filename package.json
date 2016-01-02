@@ -1,6 +1,6 @@
 {
   "name": "acd-webdav",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Amazon Cloud Drive via WebDAV",
   "main": "index.js",
   "scripts": {
