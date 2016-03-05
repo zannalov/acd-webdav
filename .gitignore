@@ -10,6 +10,3 @@
 
 # Exclude cached credentials
 /.amazon-credentials.json
-
-# TODO: Remove once ACD module in progress
-/mnt/
