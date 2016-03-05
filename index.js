@@ -27,6 +27,9 @@ var express = require( 'express' );
 var JSDAV = require( 'jsDAV/lib/jsdav' );
 var JSDAV_Locks_Backend_FS = require( 'jsDAV/lib/DAV/plugins/locks/fs' );
 
+// Turn on request debugging if available
+try { require( 'request-debug' )( require( 'request' ) ); } catch( e ) { }
+
 // Support the popular "config" npm module, but don't require it
 var config;
 try {
