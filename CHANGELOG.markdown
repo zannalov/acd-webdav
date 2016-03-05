@@ -1,3 +1,6 @@
+Version 0.0.3
+* Implemented getChild
+
 Version 0.0.2
 * Removed incorrect reference links
 * Support loading as library
