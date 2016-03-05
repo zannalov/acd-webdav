@@ -12,4 +12,5 @@ module.exports = {
         scope: 'clouddrive:read_all clouddrive:write',
         redirect_uri: 'http://localhost:8080/signin.html',
     },
+    //amazonCloudDriveBasePath: '/some/sub/folder',
 };
