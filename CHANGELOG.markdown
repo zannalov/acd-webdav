@@ -3,6 +3,7 @@ Version 0.0.3
 * Abstracted the get headers -> get endpoints -> make request process into a util file
 * Support for creating files
 * Support for creating directories
+* Support whole PUT and GET of files
 
 Version 0.0.2
 * Removed incorrect reference links
