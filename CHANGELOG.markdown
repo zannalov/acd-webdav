@@ -1,6 +1,7 @@
 Version 0.0.3
 * Implemented getChild
 * Abstracted the get headers -> get endpoints -> make request process into a util file
+* Support for creating files
 
 Version 0.0.2
 * Removed incorrect reference links
