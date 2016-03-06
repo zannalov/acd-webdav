@@ -4,6 +4,7 @@ Version 0.0.3
 * Support for creating files
 * Support for creating directories
 * Support whole PUT and GET of files
+* Support delete of node (moves to Trash folder in ACD)
 
 Version 0.0.2
 * Removed incorrect reference links
