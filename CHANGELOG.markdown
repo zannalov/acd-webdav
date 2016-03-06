@@ -5,6 +5,11 @@ Version 0.0.3
 * Support for creating directories
 * Support whole PUT and GET of files
 * Support delete of node (moves to Trash folder in ACD)
+* Support rename of node
+* Support move operation
+* Support copy file
+* Support exists check
+* Removed caching due to display not updating, but slowness means some caching will still be needed
 
 Version 0.0.2
 * Removed incorrect reference links
