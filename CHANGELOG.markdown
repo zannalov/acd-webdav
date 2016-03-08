@@ -1,6 +1,7 @@
 Version 0.0.4
 * Added repository to package.json
 * Remembered to update package.json version number
+* Use jsDAV built in mime method instead of the mime module
 
 Version 0.0.3
 * Implemented getChild
