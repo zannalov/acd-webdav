@@ -1,6 +1,6 @@
 {
   "name": "acd-webdav",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Amazon Cloud Drive via WebDAV",
   "main": "index.js",
   "scripts": {
@@ -25,5 +25,9 @@
     "jsDAV": "^0.3.2",
     "npm-license": "^0.3.1",
     "open": "0.0.5"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://gitlab.com/zannalov/acd-webdav.git"
   }
 }

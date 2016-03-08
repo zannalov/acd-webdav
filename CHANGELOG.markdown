@@ -1,3 +1,7 @@
+Version 0.0.4
+* Added repository to package.json
+* Remembered to update package.json version number
+
 Version 0.0.3
 * Implemented getChild
 * Abstracted the get headers -> get endpoints -> make request process into a util file
