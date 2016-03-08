@@ -42,6 +42,10 @@ Config module variable          | Environment variable  | Default value         
 
 Additionally, the config module supports several other interfaces, including using the ``NODE_CONFIG`` command online option or environment variable. Read more [here](https://www.npmjs.com/package/config).
 
+# Debug #
+
+If running this as an application (and not as a jsDAV plugin), use the environment variable ``JSDAV_DEBUG=true`` to turn on debugging.
+
 # References #
 
 * [Amazon Cloud Drive Developer Documentation](https://developer.amazon.com/public/apis/experience/cloud-drive/)

@@ -2,6 +2,8 @@ Version 0.0.4
 * Added repository to package.json
 * Remembered to update package.json version number
 * Use jsDAV built in mime method instead of the mime module
+* Baked in logging for requests as part of jsDAV debugging
+* Created ``JSDAV_DEBUG`` environment variable for application
 
 Version 0.0.3
 * Implemented getChild

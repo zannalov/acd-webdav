@@ -115,7 +115,7 @@ app.get( '/signin' , function( req , res ) {
 } );
 
 // Set up jsDAV/WebDAV on the root path so that WinXP will play nicely
-JSDAV.debugMode = false; // TODO: Get debug messages into logger
+JSDAV.debugMode = ( 'true' === process.env.JSDAV_DEBUG );
 var locksBackend = JSDAV_Locks_Backend_FS.new( lockDir );
 var jsdavOptions = {
     locksBackend: locksBackend,
