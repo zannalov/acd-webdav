@@ -4,8 +4,7 @@
   "description": "Amazon Cloud Drive via WebDAV",
   "main": "index.js",
   "scripts": {
-    "start": "node index",
-    "test": "echo TODO"
+    "start": "node index"
   },
   "keywords": [
     "Amazon",
