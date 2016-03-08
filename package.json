@@ -26,8 +26,8 @@
     "npm-license": "^0.3.1",
     "open": "0.0.5"
   },
-  "repository" : {
-    "type" : "git",
-    "url" : "https://gitlab.com/zannalov/acd-webdav.git"
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/zannalov/acd-webdav.git"
   }
 }
