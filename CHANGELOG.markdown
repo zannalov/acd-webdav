@@ -4,6 +4,7 @@ Version 0.0.4
 * Use jsDAV built in mime method instead of the mime module
 * Baked in logging for requests as part of jsDAV debugging
 * Created ``JSDAV_DEBUG`` environment variable for application
+* Fixed encoding problem which caused binary files to come back mangled
 
 Version 0.0.3
 * Implemented getChild
