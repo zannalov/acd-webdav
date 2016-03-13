@@ -4,7 +4,7 @@
     "eqeqeq": true,
     "freeze": true,
     "futurehostile": true,
-    "maxcomplexity": 7,
+    "maxcomplexity": 10,
     "maxdepth": 3,
     "maxparams": 5,
     "maxstatements": 25,

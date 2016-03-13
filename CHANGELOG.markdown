@@ -1,5 +1,6 @@
 Version 0.0.5
 * Added contribution guidelines and set up automated tests, fixing my own code to match
+* Added logic to fetch all pages when ACD indicates there are multiple pages of results... slow because they don't use a page number so it has to be linear
 
 Version 0.0.4
 * Added repository to package.json
