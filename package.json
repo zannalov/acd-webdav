@@ -4,7 +4,9 @@
   "description": "Amazon Cloud Drive via WebDAV",
   "main": "index.js",
   "scripts": {
-    "start": "node index"
+    "start": "node index",
+    "test": "./util/npm/test",
+    "postinstall": "./util/npm/postinstall"
   },
   "keywords": [
     "Amazon",
@@ -22,6 +24,7 @@
     "config": "^1.17.1",
     "express": "^4.13.3",
     "jsDAV": "^0.3.2",
+    "jshint": "^2.9.1",
     "npm-license": "^0.3.1",
     "open": "0.0.5"
   },

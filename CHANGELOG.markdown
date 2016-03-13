@@ -1,4 +1,5 @@
 Version 0.0.5
+* Added contribution guidelines and set up automated tests, fixing my own code to match
 
 Version 0.0.4
 * Added repository to package.json

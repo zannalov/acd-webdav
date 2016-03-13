@@ -1,0 +1,3 @@
+#!/bin/sh -e
+git config core.whitespace blank-at-eol,space-before-tab,tab-in-indent,blank-at-eof,tabwidth=4
+git config apply.whitespace error-all
