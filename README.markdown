@@ -4,7 +4,17 @@ This package provides a WebDAV interface for Amazon Cloud Drive.
 
 # Usage #
 
-TODO - run as app
+## Run as App
+
+```shell
+$ git clone 'https://gitlab.com/zannalov/acd-webdav.git'
+$ cd acd-webdav
+$ npm install
+$ npm run
+```
+
+## jsDAV Module
+
 TODO - jsDAV style interface
 
 # Why #
@@ -19,7 +29,7 @@ With only slight modification (allowing access to non-localhost interface), this
 
 First install the dev dependencies:
 
-```bash
+```shell
 ~/acd-webdav$ npm install
 ```
 
