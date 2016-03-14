@@ -3,7 +3,6 @@
 
 # Exclude temporary storage used at runtime (when used as server instead of module)
 /tmp/
-/data/
 
 # Exclude debug log recorded by service
 /npm-debug.log

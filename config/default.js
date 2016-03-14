@@ -2,7 +2,7 @@
 // Note: __dirname here is the **config** folder, not the project
 module.exports = {
     port: 8080,
-    lockDir: __dirname + '/../data',
+    lockDir: __dirname + '/../tmp',
     tmpDir: __dirname + '/../tmp',
     httpBasePath: '/',
     amazonCredentialsJsonFile: __dirname + '/../.amazon-credentials.json',
