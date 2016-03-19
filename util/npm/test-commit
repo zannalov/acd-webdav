@@ -3,4 +3,4 @@
 # Redirect output to stderr.
 exec 1>&2
 
-against=EMPTY exec util/npm/tests/all.sh
+exec util/npm/tests/all.sh
