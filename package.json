@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index",
     "test": "./util/npm/test",
-    "test-commit": "./util/npm/test-commit",
+    "test-staged": "./util/npm/test-staged",
     "postinstall": "./util/npm/postinstall"
   },
   "keywords": [

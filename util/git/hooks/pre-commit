@@ -1,2 +1,2 @@
 #!/bin/sh -e
-npm run test-commit
+npm run test-staged
