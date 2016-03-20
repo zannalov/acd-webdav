@@ -2,6 +2,17 @@ Version 0.0.5
 * Added contribution guidelines and set up automated tests, fixing my own code to match
 * Added logic to fetch all pages when ACD indicates there are multiple pages of results... slow because they don't use a page number so it has to be linear
 * Set generic timeout for all calls of 5 minutes. Should be more than ample for transferring any file which isn't huge.
+* Auto-retry when ACD rate-limits or has server-side errors
+* Consolidated app to use a single temporary folder
+* Implemented the /changes route from ACD - efficient updates via polling
+* Standardized realPath format
+* Figured out requirements for request streaming - reduces app memory footprint significantly
+* pre-commit hook runs only against changes staged since last commit, ``npm test`` runs against all staged changes for all time
+* Cleaned up lots of code - DRY
+* Abstracted acdRequest method to accept a configuration object instead of multiple parameters
+* New fs based metadata caching - combined with /changes route drastically speeds up application
+* Added helper script for mounting endpoint in OSX
+* Ignore and delete cache for trashed nodes
 
 Version 0.0.4
 * Added repository to package.json
