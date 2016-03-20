@@ -13,6 +13,14 @@ $ npm install
 $ npm run
 ```
 
+### Mount from OSX CLI
+
+With the app already running (see above)...
+
+```shell
+$ ./util/mount/osx.exp
+```
+
 ## jsDAV Module
 
 TODO - jsDAV style interface

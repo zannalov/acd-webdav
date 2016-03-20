@@ -1,0 +1,18 @@
+#!/usr/bin/expect
+# See source: https://github.com/childrss/webdav/blob/master/keep-webdav-munki-repo-mounted.exp
+
+set timeout 15
+log_user 0
+
+spawn mkdir /Volumes/acd
+
+spawn /sbin/mount_webdav -i -s -v acd http://localhost:8080/ /Volumes/acd
+expect "name:" {
+    send "\r"
+}
+expect timeout {
+    exit
+} "word:" {
+    send "\r"
+    exp_continue
+}
