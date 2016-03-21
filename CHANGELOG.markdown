@@ -1,3 +1,7 @@
+Version 1.0.0
+* Added (minimal) documentation about how this could be used inside another jsDAV implementation
+* This appears to be stable and working, so bumping to version 1.0.0
+
 Version 0.0.5
 * Added contribution guidelines and set up automated tests, fixing my own code to match
 * Added logic to fetch all pages when ACD indicates there are multiple pages of results... slow because they don't use a page number so it has to be linear

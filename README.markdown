@@ -23,7 +23,16 @@ $ ./util/mount/osx.exp
 
 ## jsDAV Module
 
-TODO - jsDAV style interface
+```javascript
+var jsDAV_ACD = require( ... );
+// new jsDAV_ACD.Auth( ... )
+// new jsDAV_ACD.Directory( ... )
+// new jsDAV_ACD.File( ... )
+// new jsDAV_ACD.Node( ... )
+// new jsDAV_ACD.Tree( ... )
+// new jsDAV_ACD.FsCache( ... )
+// new jsDAV_ACD.Changes( ... )
+```
 
 # Why #
 

@@ -6,6 +6,8 @@ var jsDAV_ACD_Directory = require( './lib/DAV/backends/amazon-cloud-drive/direct
 var jsDAV_ACD_File = require( './lib/DAV/backends/amazon-cloud-drive/file.js' );
 var jsDAV_ACD_Node = require( './lib/DAV/backends/amazon-cloud-drive/node.js' );
 var jsDAV_ACD_Tree = require( './lib/DAV/backends/amazon-cloud-drive/tree.js' );
+var jsDAV_ACD_Fs_Cache = require( './lib/DAV/backends/amazon-cloud-drive/fs-cache.js' );
+var jsDAV_ACD_Changes = require( './lib/DAV/backends/amazon-cloud-drive/changes.js' );
 
 if( require.main !== module ) {
     module.exports = {
@@ -14,6 +16,8 @@ if( require.main !== module ) {
         File: jsDAV_ACD_File,
         Node: jsDAV_ACD_Node,
         Tree: jsDAV_ACD_Tree,
+        FsCache: jsDAV_ACD_Fs_Cache,
+        Changes: jsDAV_ACD_Changes,
     };
 
     return;
